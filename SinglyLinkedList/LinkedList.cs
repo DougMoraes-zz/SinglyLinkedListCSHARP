@@ -43,9 +43,9 @@ namespace SinglyLinkedList
             LinkedListNode atual = head;
             Object lkValor = atual.Valor;
 
-            while(atual.Next != null)
+            while(atual != null)
             {
-                if (lkValor == srchValor)
+                if (lkValor.Equals (srchValor))
                 {
                     Console.WriteLine("Achei!");
 
@@ -57,16 +57,8 @@ namespace SinglyLinkedList
                 }
             }
 
-            if (lkValor == srchValor)
-            {
-                Console.WriteLine("Achei no ultimo!");
-                return true;
-            }
-            else
-            {
-                Console.WriteLine("Nada aqui!");
-                return false;
-            }
+            Console.WriteLine("Nada aqui!");
+            return false;
         }
 
         public void printAllNodes()
